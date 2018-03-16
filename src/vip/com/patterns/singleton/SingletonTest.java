@@ -1,7 +1,6 @@
-package vip.com.patterns.Singleton;
+package vip.com.patterns.singleton;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 
 public class SingletonTest {
     public static void main(String[] args) throws Exception {

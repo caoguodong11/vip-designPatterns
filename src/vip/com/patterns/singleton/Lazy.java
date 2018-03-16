@@ -1,4 +1,4 @@
-package vip.com.patterns.Singleton;
+package vip.com.patterns.singleton;
 
 /**
  * 单例模式：懒汉式

@@ -10,6 +10,7 @@ public class BeanFactory {
         if(map.containsKey(className)){
             return map.get(className);
         }else{
+            //可能存在并发问题
             Object o = null;
             try {
                 Thread.currentThread().sleep(1000);

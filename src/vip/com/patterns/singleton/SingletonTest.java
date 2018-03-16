@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 
 public class SingletonTest {
     public static void main(String[] args) throws Exception {
-        LazyTest();
+        beanFactoryTest();
     }
 
     public static void hungryTest(){
@@ -27,5 +27,12 @@ public class SingletonTest {
         System.out.println(lazy);
         declaredConstructor.newInstance();
 
+    }
+
+    public static void beanFactoryTest(){
+        for ( int i = 0; i< 100; i++) {
+            Object bean = BeanFactory.getBean("vip.com.patterns.singleton.Pojo");
+            System.out.println((i+1)+":"+bean);
+        }
     }
 }

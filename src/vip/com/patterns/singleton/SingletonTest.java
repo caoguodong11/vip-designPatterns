@@ -2,6 +2,9 @@ package vip.com.patterns.singleton;
 
 import java.lang.reflect.Constructor;
 
+/**
+ * 单例模式
+ */
 public class SingletonTest {
     public static void main(String[] args) throws Exception {
         beanFactoryTest();

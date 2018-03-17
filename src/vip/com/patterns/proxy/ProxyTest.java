@@ -4,6 +4,9 @@ import sun.misc.ProxyGenerator;
 
 import java.io.FileOutputStream;
 
+/**
+ * 代理模式
+ */
 public class ProxyTest {
     public static void main(String[] args) throws Exception {
         System.out.println(ProxyTest.class.getResource(".").getPath());

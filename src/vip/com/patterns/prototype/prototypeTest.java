@@ -1,5 +1,9 @@
 package vip.com.patterns.prototype;
 
+
+/**
+ * 原型模式
+ */
 public class prototypeTest {
     public static void main(String[] args) throws CloneNotSupportedException {
         deepTest();

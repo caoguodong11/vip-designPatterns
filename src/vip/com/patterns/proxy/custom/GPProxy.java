@@ -40,7 +40,7 @@ public class GPProxy {
             //4、编译生成的.class文件加载到JVM中来
             Class proxyClass = classLoader.findClass("$Proxy0");
             Constructor c = proxyClass.getConstructor(GPInvocationHandler.class);
-            f.delete();
+            //f.delete();
 
             //5、返回字节码重组以后的新的代理对象
             return c.newInstance(h);
@@ -53,8 +53,8 @@ public class GPProxy {
     private static String generateSrc(Class<?>[] interfaces) {
 
         StringBuffer sb = new StringBuffer();
-        sb.append("package com.gupaoedu.vip.pattern.proxy.custom;" + ln);
-        sb.append("import com.gupaoedu.vip.pattern.proxy.staticed.Person;" + ln);
+        sb.append("package vip.com.patterns.proxy.custom;" + ln);
+        sb.append("import vip.com.patterns.proxy.Person;" + ln);
         sb.append("import java.lang.reflect.Method;" + ln);
         sb.append("public class $Proxy0 implements " + interfaces[0].getName() + "{" + ln);
         sb.append("GPInvocationHandler h;" + ln);

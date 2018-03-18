@@ -37,8 +37,8 @@ public class JdbcTemplate {
     public PreparedStatement preparedStatement(Connection conn, String sql, Object[] values) throws SQLException {
         PreparedStatement preparedStatement = conn.prepareStatement(sql);
         if (values != null && values.length > 0) {
-            for (int i = 0; i < values.length; i++) {
-                preparedStatement.setObject(i, values[i]);
+            for (int i = 1; i <= values.length; i++) {
+                preparedStatement.setObject(i, values[i-1]);
             }
         }
         return preparedStatement;
